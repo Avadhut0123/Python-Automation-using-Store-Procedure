@@ -10,8 +10,8 @@ class Report():
     SKU = ['WPHS6-0024']
     Date = '2021-12-31'
 
-    conn = ("""driver={SQL Server};server=10.10.10.56;database=EMIZA-AUGMENTED-TEST;
-        trusted_connection=no;UID=CCS02;PWD=Pass@1234;IntegratedSecurity = true;""")
+    conn = ("""driver={SQL Server};server={{Sql Port}};database={{SQL DB_NAME}};
+        trusted_connection=no;UID={{SQL UID}};PWD={{SQL PASS}};IntegratedSecurity = true;""")
     conx = pyodbc.connect(conn)
     cur = conx.cursor()
 
